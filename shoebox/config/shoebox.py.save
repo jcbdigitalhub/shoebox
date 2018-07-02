@@ -1,0 +1,55 @@
+from __future__ import unicode_literals
+from frappe import _
+
+def get_data():
+        return [
+                {                
+                        "label": _("My Business"),
+                        "items": [
+                                {
+                                        "type": "doctype",
+                                        "name": "Registration"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Transactions"
+                                },
+				{
+				        "type": "doctype",
+                                        "name": "Tax Returns"
+				},
+				{
+					"type": "doctype",
+					"name": "Books of Accounts",
+				}
+                        ]
+                },                     "name": "Warehouse Provider"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Broker"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Service Provider"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Network"
+                                },
+								]
+                },
+                {
+                        "label": _("Agreements"),
+                        "items": [
+                                {
+                                        "type": "doctype",
+                                        "name": "Service Level"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Agency Agreement"
+                                },
+								]
+                },
+				]

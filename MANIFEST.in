@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include shoebox *.css
+recursive-include shoebox *.csv
+recursive-include shoebox *.html
+recursive-include shoebox *.ico
+recursive-include shoebox *.js
+recursive-include shoebox *.json
+recursive-include shoebox *.md
+recursive-include shoebox *.png
+recursive-include shoebox *.py
+recursive-include shoebox *.svg
+recursive-include shoebox *.txt
+recursive-exclude shoebox *.pyc
