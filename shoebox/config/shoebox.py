@@ -45,5 +45,72 @@ def get_data():
                                 },
                         ]
                 },
+                {
+                        "label": _("My Accountant"),
+                        "items": [
+                                {
+                                        "type": "doctype",
+                                        "name": "Journal Entry"
+                                },
+				{
+					"type": "doctype",
+					"name": "Account",
+					"icon": "fa fa-sitemap",
+					"label": _("Chart of Accounts"),
+					"route": "Tree/Account",
+					"description": _("Tree of financial accounts."),
+				},
+                                {
+                                        "type": "doctype",
+                                        "name": "Customer"
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Supplier"
+                                },
+				{
+					"type": "doctype",
+					"name": "Bank Reconciliation",
+					"label": _("Bank Reconciliation"),
+					"description": _("Update bank transaction clearing dates."),
+				},
 
+                        ]
+                },
+		{
+			"label": _("Reports"),
+			"items": [
+				{
+					"type": "report",
+					"name": "Trial Balance",
+					"doctype": "GL Entry",
+					"is_query_report": True,
+				},
+				{
+					"type": "report",
+					"name": "Balance Sheet",
+					"doctype": "GL Entry",
+					"is_query_report": True
+				},
+				{
+					"type": "report",
+					"name": "Cash Flow",
+					"doctype": "GL Entry",
+					"is_query_report": True
+				},
+				{
+					"type": "report",
+					"name": "Profit and Loss Statement",
+					"doctype": "GL Entry",
+					"is_query_report": True
+				},
+				{
+					"type": "report",
+					"name":"General Ledger",
+					"doctype": "GL Entry",
+					"is_query_report": True,
+				},
+
+			]
+		},
 		]

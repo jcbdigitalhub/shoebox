@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2018, JCB Accounting Services and contributors
+# For license information, please see license.txt
+
+from __future__ import unicode_literals
+import frappe
+from frappe.model.document import Document
+from frappe.model.mapper import get_mapped_doc
+
+class PaymentTransaction(Document):
+	pass
+
+@frappe.whitelist()
+def make_payment_entry(source_name, target_doc=None):
+	def set_missing_values(source, target):
+		target.shoebox_ref_type = "Payment Transaction"
+		target.shoebox_reference = source.name
+		target.series = "PE-"
+		target.payment_type = "Pay"
+		target.posting_date = source.date
+		target.party_type = "Supplier"
+		target.party = source.sold_to
+		target.paid_from = source.bank_gl_account
+		target.paid_amount = source.amount
+		target.reference_no = source.invoice_no
+		target.reference_date = source.date
+
+		target"validate.run_method("set_missing_values")
+
+	doc = get_mapped_doc("Payment Transaction", source_name, {
+		"Payment Transaction": {
+			"doctype": "Payment Entry"
+		},
+		"field_map": {
+			"doctype": "shoebox_ref_type",
+			"name": "shoebox_reference",
+		}
+	}, target_doc, set_missing_values)
+
+	return doc
