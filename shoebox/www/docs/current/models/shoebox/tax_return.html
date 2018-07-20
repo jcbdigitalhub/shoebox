@@ -1,0 +1,345 @@
+<!-- title: Tax Return -->
+<!-- add-breadcrumbs -->
+
+
+
+
+
+<h1>Tax Return</h1>
+<div class="dev-header">
+
+<a class="btn btn-default btn-sm" disabled style="margin-bottom: 10px;">
+	Version 0.0.1</a>
+
+
+	<a class="btn btn-default btn-sm" href="https://github.com/opentch/shoebox/tree/develop/shoebox/shoebox/doctype/tax_return"
+		target="_blank" style="margin-left: 10px; margin-bottom: 10px;"><i class="octicon octicon-mark-github"></i> Source</a>
+
+</div>
+
+
+
+
+
+    <p><b>Table Name:</b> <code>tabTax Return</code></p>
+
+
+
+
+<h3>Fields</h3>
+
+<table class="table table-bordered docfields">
+    <thead>
+        <tr>
+            <th style="width: 5%">Sr</th>
+            <th style="width: 25%">Fieldname</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 25%">Label</th>
+            <th style="width: 25%">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr >
+            <td>1</td>
+            <td class="danger" title="Mandatory"><code>return_name</code></td>
+            <td >
+                Data</td>
+            <td >
+                Return Name
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>2</td>
+            <td class="danger" title="Mandatory"><code>return_type</code></td>
+            <td >
+                Link</td>
+            <td >
+                Return Type
+                
+            </td>
+            <td>
+                
+                
+
+
+<a href="/docs/current/models/shoebox/tax_return_type">Tax Return Type</a>
+
+
+                
+            </td>
+        </tr>
+        
+        <tr >
+            <td>3</td>
+            <td ><code>return_description</code></td>
+            <td >
+                Read Only</td>
+            <td >
+                Return Description
+                
+            </td>
+            <td>
+                <pre>return_type.description</pre>
+            </td>
+        </tr>
+        
+        <tr >
+            <td>4</td>
+            <td ><code>return_remarks</code></td>
+            <td >
+                Read Only</td>
+            <td >
+                Return Remarks
+                
+            </td>
+            <td>
+                <pre>return_type.remarks</pre>
+            </td>
+        </tr>
+        
+        <tr >
+            <td>5</td>
+            <td ><code>column_break_4</code></td>
+            <td class="info">
+                Column Break</td>
+            <td >
+                
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>6</td>
+            <td class="danger" title="Mandatory"><code>due_date</code></td>
+            <td >
+                Date</td>
+            <td >
+                Due Date
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>7</td>
+            <td ><code>amount_due</code></td>
+            <td >
+                Currency</td>
+            <td >
+                Amount Due
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>8</td>
+            <td ><code>status</code></td>
+            <td >
+                Data</td>
+            <td >
+                Status
+                
+            </td>
+            <td>
+                <pre>Working
+Filed
+Paid</pre>
+            </td>
+        </tr>
+        
+        <tr class="info">
+            <td>9</td>
+            <td ><code>filing_details</code></td>
+            <td >
+                Section Break</td>
+            <td >
+                Filing Details
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>10</td>
+            <td ><code>filing_reference_no</code></td>
+            <td >
+                Data</td>
+            <td >
+                Filing Reference No
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>11</td>
+            <td ><code>filing_date</code></td>
+            <td >
+                Date</td>
+            <td >
+                Filing Date
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>12</td>
+            <td ><code>column_break_10</code></td>
+            <td class="info">
+                Column Break</td>
+            <td >
+                
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>13</td>
+            <td ><code>filing_remarks</code></td>
+            <td >
+                Text Editor</td>
+            <td >
+                Remarks
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr class="info">
+            <td>14</td>
+            <td ><code>payment_details</code></td>
+            <td >
+                Section Break</td>
+            <td >
+                Payment Details
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>15</td>
+            <td ><code>payment_reference_no</code></td>
+            <td >
+                Data</td>
+            <td >
+                Payment Reference No
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>16</td>
+            <td ><code>payment_date</code></td>
+            <td >
+                Date</td>
+            <td >
+                Payment Date
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>17</td>
+            <td ><code>column_break_15</code></td>
+            <td class="info">
+                Column Break</td>
+            <td >
+                
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>18</td>
+            <td ><code>payment_remarks</code></td>
+            <td >
+                Text Editor</td>
+            <td >
+                Remarks
+                
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr >
+            <td>19</td>
+            <td ><code>amended_from</code></td>
+            <td >
+                Link</td>
+            <td >
+                Amended From
+                
+            </td>
+            <td>
+                
+                
+
+
+<a href="/docs/current/models/shoebox/tax_return">Tax Return</a>
+
+
+                
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+    <hr>
+    <h3>Controller</h3>
+    <h4>shoebox.shoebox.doctype.tax_return.tax_return</h4>
+
+    
+
+
+
+	
+        
+	<h3 style="font-weight: normal;">Class <b>TaxReturn</b></h3>
+    
+    <p style="padding-left: 30px;"><i>Inherits from frappe.model.document.Document</i></h4>
+    
+    <div class="docs-attr-desc"><p></p>
+</div>
+    <div style="padding-left: 30px;">
+        
+    </div>
+    <hr>
+
+	
+
+
+    
+    
+        <h4>Linked In:</h4>
+        <ul>
+        
+			
+            <li>
+
+
+<a href="/docs/current/models/shoebox/tax_return">Tax Return</a>
+
+</li>
+			
+        
+        </ul>
+    
+
+
+<!-- autodoc -->
+<!-- jinja -->
+<!-- static -->

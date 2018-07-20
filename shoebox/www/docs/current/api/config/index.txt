@@ -1,0 +1,4 @@
+shoebox.config.shoebox
+shoebox.config
+shoebox.config.desktop
+shoebox.config.docs
