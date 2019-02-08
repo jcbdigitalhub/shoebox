@@ -1,11 +1,11 @@
 frappe.ui.form.on("Journal Entry", {
 	shoebox_document_no: function(frm) {
 		frappe.call({
-		        method: "frappe.client.get",
-		        args: {
-		            doctype: frm.doc.shoebox_doctype,
-		            name: frm.doc.shoebox_document_no,
-		        },
+			method: "frappe.client.get",
+			args: {
+			    doctype: frm.doc.shoebox_doctype,
+			    name: frm.doc.shoebox_document_no,
+			},
  		        callback(r) {
  		            if(r.message) {
 					var trans = r.message;
@@ -78,8 +78,8 @@ frappe.ui.form.on("Journal Entry", {
 							]);
 						}
 
-		            }
-		        }
+			    }
+			}
 
 
 		});
@@ -91,5 +91,9 @@ frappe.ui.form.on("Journal Entry", {
 				filters: {"docstatus": 0}
 			};
 		});
+	},
+
+	view_document: function(frm){
+		window.open('#Form/'+ frm.doc.shoebox_doctype + '/' + frm.doc.shoebox_document_no, '_blank');
 	}
 });
