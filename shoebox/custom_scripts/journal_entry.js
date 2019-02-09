@@ -23,6 +23,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -40,6 +43,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -57,6 +63,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -74,6 +83,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
