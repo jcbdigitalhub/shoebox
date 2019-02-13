@@ -1,2 +1,2 @@
-#Shoebox
-##Shoebox for Bookkeepers
+### Client's Guide
+### Accountant's Guide
