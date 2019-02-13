@@ -1,11 +1,11 @@
 frappe.ui.form.on("Journal Entry", {
 	shoebox_document_no: function(frm) {
 		frappe.call({
-		        method: "frappe.client.get",
-		        args: {
-		            doctype: frm.doc.shoebox_doctype,
-		            name: frm.doc.shoebox_document_no,
-		        },
+			method: "frappe.client.get",
+			args: {
+			    doctype: frm.doc.shoebox_doctype,
+			    name: frm.doc.shoebox_document_no,
+			},
  		        callback(r) {
  		            if(r.message) {
 					var trans = r.message;
@@ -23,6 +23,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -40,6 +43,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -57,6 +63,9 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
@@ -74,12 +83,15 @@ frappe.ui.form.on("Journal Entry", {
 								() => frm.set_value("tin", trans.tin),
 								() => frm.set_value("address_1", trans.address_1),
 								() => frm.set_value("address_2", trans.address_2),
+								() => frm.set_value("first_name", trans.first_name),
+								() => frm.set_value("middle_name", trans.middle_name),
+								() => frm.set_value("last_name", trans.last_name),
 								() => done()
 							]);
 						}
 
-		            }
-		        }
+			    }
+			}
 
 
 		});
@@ -91,5 +103,9 @@ frappe.ui.form.on("Journal Entry", {
 				filters: {"docstatus": 0}
 			};
 		});
+	},
+
+	view_document: function(frm){
+		window.open('#Form/'+ frm.doc.shoebox_doctype + '/' + frm.doc.shoebox_document_no, '_blank');
 	}
 });

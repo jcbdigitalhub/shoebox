@@ -11,5 +11,6 @@ from frappe.utils import flt, cstr
 from frappe.email.doctype.email_group.email_group import add_subscribers
 
 def on_submit(doc, method):
-	d = frappe.get_doc(doc.shoebox_doctype, doc.shoebox_document_no)
-	d.submit()
+	if doc.voucher_type != "Journal":
+		d = frappe.get_doc(doc.shoebox_doctype, doc.shoebox_document_no)
+		d.submit()
